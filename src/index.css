@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core palette - earthy, fresh, organic */
+    --background: 45 30% 97%;
+    --foreground: 25 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 12%;
+
+    /* Forest green - primary brand */
+    --primary: 140 45% 28%;
+    --primary-foreground: 45 30% 97%;
+    --primary-light: 140 35% 42%;
+    --primary-glow: 140 50% 55%;
+
+    /* Harvest amber - secondary */
+    --secondary: 38 85% 52%;
+    --secondary-foreground: 25 20% 12%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 38 85% 52%;
+    --accent-foreground: 25 20% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 86%;
+    --input: 45 20% 92%;
+    --ring: 140 45% 28%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --earth: 25 45% 35%;
+    --earth-light: 30 40% 88%;
+    --harvest: 38 85% 52%;
+    --harvest-light: 42 90% 90%;
+    --forest: 140 45% 28%;
+    --forest-light: 138 38% 94%;
+    --sky: 200 70% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(140 45% 22% / 0.85), hsl(25 45% 20% / 0.6));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(45 30% 97%));
+    --gradient-primary: linear-gradient(135deg, hsl(140 45% 28%), hsl(140 35% 42%));
+    --gradient-amber: linear-gradient(135deg, hsl(38 85% 48%), hsl(30 90% 58%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(25 20% 12% / 0.06);
+    --shadow-md: 0 4px 20px hsl(25 20% 12% / 0.1);
+    --shadow-lg: 0 8px 40px hsl(25 20% 12% / 0.14);
+    --shadow-green: 0 4px 20px hsl(140 45% 28% / 0.25);
+    --shadow-amber: 0 4px 20px hsl(38 85% 52% / 0.3);
+
+    --sidebar-background: 140 30% 18%;
+    --sidebar-foreground: 45 30% 92%;
+    --sidebar-primary: 38 85% 52%;
+    --sidebar-primary-foreground: 25 20% 12%;
+    --sidebar-accent: 140 35% 25%;
+    --sidebar-accent-foreground: 45 30% 92%;
+    --sidebar-border: 140 30% 25%;
+    --sidebar-ring: 38 85% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-amber {
+    background: var(--gradient-amber);
+  }
+  .shadow-green {
+    box-shadow: var(--shadow-green);
+  }
+  .shadow-amber {
+    box-shadow: var(--shadow-amber);
+  }
+  .text-earth {
+    color: hsl(var(--earth));
+  }
+  .bg-earth-light {
+    background-color: hsl(var(--earth-light));
+  }
+  .bg-forest-light {
+    background-color: hsl(var(--forest-light));
+  }
+  .bg-harvest-light {
+    background-color: hsl(var(--harvest-light));
+  }
+  .text-harvest {
+    color: hsl(var(--harvest));
+  }
+  .text-forest {
+    color: hsl(var(--forest));
+  }
+}
